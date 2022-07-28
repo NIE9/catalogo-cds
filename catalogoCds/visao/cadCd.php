@@ -1,7 +1,7 @@
-cadContato.php<?php
+<?php
 if(isset($_POST['botao']) && $_POST['botao']=="Adicionar"){
-	include $_SERVER['DOCUMENT_ROOT']."/agenda/controle/ControleContato.class.php";
-	$cControle = new ControleContato();
+	include $_SERVER['DOCUMENT_ROOT']."catalogoCds\controle\ControleCatalogo.class.php";
+	$cControle = new ControleCatalogo();
 	$cControle->inserir($_POST);
 }
 ?>
@@ -13,8 +13,6 @@ if(isset($_POST['botao']) && $_POST['botao']=="Adicionar"){
 <body>
 <form method='post' action='cadEstilo.php'>
 	Nome: <input type='text' name='nome'>
-	<br>
-	Numero: <input type='tel' name='numero'>
 	<br>
 	<input type='submit' name='botao' value='Adicionar'>
 </form>

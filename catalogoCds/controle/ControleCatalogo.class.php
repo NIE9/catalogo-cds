@@ -1,10 +1,28 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT']."/agenda/modelo/Contato.class.php";
 
-class ControleContato{
+class ControleCatalogo{
 	
-	public function inserir($dados){
-		$contato = new Contato(null,$dados['nome'],$dados['numero']);
+	public function inserirArtista($dados){
+		$contato = new Artista(null,$dados['nome']);
+		$contato->inserirArtista();
+		header("location:../visao/pesquisar.php");
+	}
+	
+	public function inserirEstilo($dados){
+		$contato = new Estilo(null,$dados['identificacao']);
+		$contato->inserirEstilo();
+		header("location:../visao/pesquisar.php");
+	}
+	
+	public function inserirGravadora($dados){
+		$contato = new Artista(null,$dados['nome']);
+		$contato->inserir();
+		header("location:../visao/pesquisar.php");
+	}
+
+	public function inserirCd($dados){
+		$contato = new Artista(null,$dados['nome']);
 		$contato->inserir();
 		header("location:../visao/pesquisar.php");
 	}

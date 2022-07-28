@@ -8,13 +8,11 @@ if(isset($_POST['botao']) && $_POST['botao']=="Adicionar"){
 <html lang='pt-br'>
 <head>
 <meta charset='utf-8'>
-<title>Agenda de Contatos</title>
+<title>Catálogo de CDs</title>
 </head>
 <body>
-<form method='post' action='cadEstilo.php'>
-	Nome: <input type='text' name='nome'>
-	<br>
-	Numero: <input type='tel' name='numero'>
+<form method='post' action='cadGravadora.php'>
+	Nome da gravadora: <input type='text' name='nome'>
 	<br>
 	<input type='submit' name='botao' value='Adicionar'>
 </form>
