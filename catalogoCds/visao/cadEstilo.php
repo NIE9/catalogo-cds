@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST['botao']) && $_POST['botao']=="Adicionar"){
-	include $_SERVER['DOCUMENT_ROOT']."/catalogoCds/controle/ControleEstilo.class.php";
+	include $_SERVER['DOCUMENT_ROOT']."catalogoCds\controle\ControleEstilo.class.php";
 	$Controle = new ControleEstilo();
 	$Controle->inserir($_POST);
 }
