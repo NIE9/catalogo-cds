@@ -1,8 +1,8 @@
 <?php
 if(isset($_POST['botao']) && $_POST['botao']=="Adicionar"){
-	include $_SERVER['DOCUMENT_ROOT']."/agenda/controle/ControleEstilo.class.php";
-	$cControle = new ControleEstilo();
-	$cControle->inserir($_POST);
+	include $_SERVER['DOCUMENT_ROOT']."/catalogoCds/controle/ControleEstilo.class.php";
+	$Controle = new ControleEstilo();
+	$Controle->inserir($_POST);
 }
 ?>
 <html lang='pt-br'>

@@ -1,8 +1,8 @@
 <?php
 if(isset($_POST['botao']) && $_POST['botao']=="Adicionar"){
-	include $_SERVER['DOCUMENT_ROOT']."/agenda/controle/ControleGravadora.class.php";
-	$cControle = new ControleGravadora();
-	$cControle->inserir($_POST);
+	include $_SERVER['DOCUMENT_ROOT']."/catalogoCds/controle/ControleGravadora.class.php";
+	$Controle = new ControleGravadora();
+	$Controle->inserir($_POST);
 }
 ?>
 <html lang='pt-br'>

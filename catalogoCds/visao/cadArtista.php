@@ -1,8 +1,9 @@
 <?php
 if(isset($_POST['botao']) && $_POST['botao']=="Adicionar"){
-	include $_SERVER['DOCUMENT_ROOT']."catalogoCds\controle\ControleCatalogo.class.php";
-	$cControle = new ControleCatalogo();
-	$cControle->inserir($_POST);
+	echo $_SERVER['DOCUMENT_ROOT']."\catalogoCds\controle\ControleArtista.class.php";
+	include $_SERVER['DOCUMENT_ROOT']."/catalogoCds/controle/ControleArtista.class.php";
+	$Controle = new ControleArtista();
+	$Controle->inserir($_POST);
 }
 ?>
 <html lang='pt-br'>

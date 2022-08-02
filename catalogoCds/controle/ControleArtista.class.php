@@ -1,52 +1,34 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT']."/agenda/modelo/Contato.class.php";
+include $_SERVER['DOCUMENT_ROOT']."/catalogoCds/modelo/Artista.class.php";
 
-class ControleCatalogo{
+class ControleArtista{
 	
-	public function inserirArtista($dados){
-		$contato = new Artista(null,$dados['nome']);
-		$contato->inserirArtista();
-		header("location:../visao/pesquisar.php");
-	}
-	
-	public function inserirEstilo($dados){
-		$contato = new Estilo(null,$dados['identificacao']);
-		$contato->inserirEstilo();
-		header("location:../visao/pesquisar.php");
-	}
-	
-	public function inserirGravadora($dados){
-		$contato = new Artista(null,$dados['nome']);
-		$contato->inserir();
-		header("location:../visao/pesquisar.php");
-	}
-
-	public function inserirCd($dados){
-		$contato = new Artista(null,$dados['nome']);
-		$contato->inserir();
+	public function inserir($dados){
+		$artista = new Artista(null,$dados['nome']);
+		$artista->inserir();
 		header("location:../visao/pesquisar.php");
 	}
 	
 	public function listarTodos(){
-		$contato = new Contato();
-		$contatos = $contato->listarTodos();
-		return $contatos;
+		$artista = new Artista();
+		$artistas = $artista->listarTodos();
+		return $artistas;
 	}
 	
 	public function listarUm($id){
-		$contato = new Contato($id,null,null);
-		$contato->listarUm();
-		return $contato;
+		$artista = new Artista($id,null);
+		$artista->listarUm();
+		return $artista;
 	}
 	
 	public function excluir($id){
-		$contato = new Contato($id,null,null);
-		$contato->excluir();
+		$artista = new Artista($id,null);
+		$artista->excluir();
 	}
 	
 	public function alterar($dados){
-		$contato = new Contato($dados['id'],$dados['nome'],$dados['numero']);
-		$contato->alterar();
+		$artista = new Artista($dados['id'],$dados['nome'];
+		$artista->alterar();
 		header("location: pesquisar.php");
 	}
 	

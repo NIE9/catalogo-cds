@@ -1,7 +1,7 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT']."/agenda/modelo/Gravadora.class.php";
+include $_SERVER['DOCUMENT_ROOT']."/catalogoCds/modelo/Gravadora.class.php";
 
-class ControleCatalogo{
+class ControleGravadora{
 	
 	/*public function inserirArtista($dados){
 		$contato = new Artista(null,$dados['nome']);

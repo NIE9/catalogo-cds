@@ -1,11 +1,11 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT']."/agenda/modelo/Estilo.class.php";
+include $_SERVER['DOCUMENT_ROOT']."/catalogoCds/modelo/Estilo.class.php";
 
-class ControleCatalogo{
+class ControleEstilo{
 	
 	/*public function inserirArtista($dados){
-		$estilo = new Artista(null,$dados['nome']);
-		$estilo->inserirArtista();
+		$contato = new Artista(null,$dados['nome']);
+		$contato->inserirArtista();
 		header("location:../visao/pesquisar.php");
 	}*/
 	

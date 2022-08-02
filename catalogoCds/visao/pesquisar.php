@@ -1,5 +1,5 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT']."/agenda/controle/ControleContato.class.php";
+include $_SERVER['DOCUMENT_ROOT']."/catalogoCds/controle/ControleContato.class.php";
 $cContato = new ControleContato();
 
 if(isset($_GET['id'])){
